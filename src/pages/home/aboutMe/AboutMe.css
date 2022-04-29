@@ -1,0 +1,24 @@
+.aboutMe {
+  flex: 0.7;
+  margin-bottom: 10px;
+}
+
+.aboutMe__link {
+  color: #1867f2;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 5px;
+}
+
+.aboutMe__link:hover {
+  text-decoration: underline;
+}
+
+.aboutMe__title {
+  color: #757575;
+  font-weight: 600;
+}
+
+.aboutMe__details {
+  color: #757575;
+}

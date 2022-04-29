@@ -1,0 +1,75 @@
+.achievements {
+  width: 100vw;
+}
+
+.achievements_title {
+  display: flex;
+  align-items: center;
+  color: #757575;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 10px 20px;
+  background-color: #dfdfdf;
+}
+
+.achievements_title > img {
+  object-fit: contain;
+  width: 100px;
+  margin-left: 10px;
+  animation: achievements__carMotionOut 1s ease-in 1 forwards;
+}
+
+.achievements__cgpa {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.achievements__cgpa img {
+  width: 400px;
+  object-fit: contain;
+}
+
+.achievements__results {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.achievements__infoBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover !important;
+  width: 100vw !important;
+  height: 100% !important;
+  opacity: 0.1;
+}
+
+@keyframes achievements__carMotionOut {
+  to {
+    opacity: 0;
+    transform: translateX(30vw);
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  .achievements__results,
+  .achievements__cgpa {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .achievements__cgpa img {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .achievements__cgpa img {
+    width: 200px;
+  }
+}

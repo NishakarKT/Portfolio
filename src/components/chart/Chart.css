@@ -1,0 +1,10 @@
+.chart {
+  width: 50vw;
+  margin: 15px;
+}
+
+@media only screen and (max-width: 860px) {
+  .chart {
+    width: 80vw;
+  }
+}

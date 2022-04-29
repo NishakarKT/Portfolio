@@ -1,0 +1,22 @@
+.loading {
+  position: absolute;
+  top: 0;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: white;
+  z-index: 1;
+}
+
+.loading > img {
+  object-fit: contain;
+  width: 250px;
+}
+
+@media only screen and (max-width: 250px) {
+  .loading > img {
+    width: 100%;
+  }
+}

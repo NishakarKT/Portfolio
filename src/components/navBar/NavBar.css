@@ -1,0 +1,87 @@
+.navBar {
+  width: 100%;
+  background-color: #dfdfdf;
+}
+
+.navBar__left {
+  display: flex;
+  align-items: center;
+}
+
+.navBar__logo {
+  object-fit: contain;
+  width: 70px;
+  padding: 10px;
+}
+
+.navBar__link {
+  color: #757575;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px;
+  padding-bottom: 5px;
+  border-bottom: 3px solid transparent;
+  border-radius: 5px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  transition: all 0.5s;
+}
+
+.navBar__link:hover {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+.navBar__link > .MuiSvgIcon-root {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.navBar__linkActive {
+  color: hsl(204, 41%, 37%);
+  border-bottom: 3px solid #386887;
+}
+
+@media only screen and (max-width: 575px) {
+  .navBar__left {
+    justify-content: center;
+  }
+  .navBar__logo {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .navBar__link > .MuiSvgIcon-root {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .navBar__left {
+    justify-content: space-evenly;
+  }
+  .navBar__link > .MuiSvgIcon-root {
+    font-size: 25px;
+    display: initial;
+  }
+  .navBar__link > p {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 210px) {
+  .navBar__link > .MuiSvgIcon-root {
+    font-size: 20px;
+    display: initial;
+  }
+}
+
+@media only screen and (max-width: 180px) {
+  .navBar__link > .MuiSvgIcon-root {
+    font-size: 15px;
+    display: initial;
+  }
+}

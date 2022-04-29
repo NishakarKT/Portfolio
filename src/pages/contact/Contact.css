@@ -1,0 +1,222 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact__box {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.contact > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100vw;
+  height: 100%;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.contact__form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact__feedbackForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: contact__appear 1s ease-out forwards;
+  padding: 10px;
+}
+
+.contact__feedbackForm > p {
+  color: #757575;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.contact__form .MuiButton-root {
+  flex: 1;
+  color: white;
+  background-color: teal;
+  text-transform: none;
+  margin: 5px;
+  margin-top: 10px;
+  transition: all 0.5s;
+  border-radius: 3px;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.contact__feedbackForm > .MuiTextField-root {
+  margin-bottom: 10px;
+}
+
+.contact__feedbackForm > textarea {
+  font-size: 17px;
+  outline: none;
+  min-width: 200px;
+  min-height: 100px;
+  max-width: 200px;
+  max-height: 100px;
+  font-family: inherit;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.contact__feedbackForm > textarea::-webkit-scrollbar {
+  width: 3px;
+}
+
+.contact__feedbackForm > textarea::-webkit-scrollbar-thumb {
+  background-color: grey;
+}
+
+.contact__form .MuiButton-root:hover {
+  transform: scale(1.02);
+  filter: brightness(115%);
+  background-color: teal;
+}
+
+.contact__buttonsBox {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.contact__linksBox {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact__illustration {
+  object-fit: contain;
+  width: 70%;
+}
+
+.contact__linkIcon {
+  position: absolute;
+  left: 40%;
+  top: 10%;
+  object-fit: contain;
+  width: 40px;
+  cursor: pointer;
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.contact__linkIcon:hover {
+  filter: brightness(125%);
+}
+
+.contact__fbIcon {
+  transform: translateX(50px) translateY(0px);
+  animation: contact__iconFloat 15s linear infinite forwards;
+}
+
+.contact__igIcon {
+  transform: translateX(25px) translateY(43px);
+  animation: contact__iconFloat 17s linear 0.3s infinite forwards;
+}
+
+.contact__inIcon {
+  transform: translateX(-25px) translateY(43px);
+  animation: contact__iconFloat 19s linear 0.6s infinite forwards;
+}
+
+.contact__twIcon {
+  transform: translateX(-50px) translateY(0px);
+  animation: contact__iconFloat 21s linear 0.9s infinite forwards;
+}
+
+.contact__ytIcon {
+  transform: translateX(-25px) translateY(-43px);
+  animation: contact__iconFloat 23s linear 1.2s infinite forwards;
+}
+
+.contact__gmIcon {
+  transform: translateX(25px) translateY(-43px);
+  animation: contact__iconFloat 25s linear 1.5s infinite forwards;
+}
+
+@keyframes contact__appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes contact__iconFloat {
+  10% {
+    opacity: 1;
+    transform: translateX(150px) translateY(100px);
+  }
+  20% {
+    transform: translateX(50px) translateY(150px);
+  }
+  30% {
+    transform: translateX(-50px) translateY(150px);
+  }
+  40% {
+    transform: translateX(-100px) translateY(0px);
+  }
+  150% {
+    transform: translateX(0px) translateY(-50px);
+  }
+  60% {
+    transform: translateX(50px) translateY(50px);
+  }
+  70% {
+    opacity: 1;
+    transform: translateX(150px) translateY(0px);
+  }
+  80% {
+    transform: translateX(150px) translateY(-50px);
+  }
+  90% {
+    transform: translateX(50px) translateY(50px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(inherit) translateY(inherit);
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .contact__box {
+    flex-direction: column;
+  }
+  .contact__linksBox {
+    margin-top: 10px;
+  }
+  .contact__linkIcon {
+    top: 30%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .contact__linkIcon {
+    width: 30px;
+  }
+}
+
+@media only screen and (max-width: 212px) {
+  .contact__feedbackForm > textarea {
+    min-width: 95vw;
+    max-width: 95vw;
+  }
+}
